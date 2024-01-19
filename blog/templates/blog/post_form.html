@@ -1,0 +1,15 @@
+{% extends 'users/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Create Blog{% endblock title %}
+
+{% block body %}
+<div class="form-style">
+    <form method="POST" class="d-flex flex-column p-4 justify-content-center bg-transparent">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button class="btn-custom m-2" role="button">Post</button>
+    </form>
+</div>
+{% endblock body %}

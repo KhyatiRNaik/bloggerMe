@@ -1,0 +1,17 @@
+{% extends 'users/base.html' %}
+
+{% block title %}Delete Blog{% endblock title %}
+
+{% block body %}
+<div class="form-style">
+    <form method="POST" class="d-flex flex-column p-4 justify-content-center bg-transparent">
+        {% csrf_token %}
+        <H2>Are you sure you want to delete {{ post.title }}</h2>
+            
+        <div class="d-flex align-self-center">
+            <button class="btn-custom m-3" type="submit">Delete</button>
+            <a href="{% url 'post-detail' post.post_id %}" class="btn-custom m-3 text-decoration-none">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock body %}

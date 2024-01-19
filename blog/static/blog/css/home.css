@@ -1,0 +1,55 @@
+.create-blog{
+    background: rgb(145, 90, 300); 
+}
+
+.username, .date {
+    color: #555;
+    font-size: 15px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+
+
+.heading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #333;
+}
+
+.logo{
+    margin-left: 0.1em;
+    font-size: 2rem;
+    font-family: "Lobster", cursive;
+    color: #a485b8; /*9a74b1*/
+    font-weight: 700;
+}
+
+.like{
+    background: none;
+    border: unset;
+    outline: 0;
+    font-size: 15px;
+    cursor: pointer;
+    color: #65676b;
+    padding: 2px 1px;
+    z-index: 10;
+  }
+  .like.liked {
+    color: #7b00ff; /* #0571ed;*/
+  }
+  .like.liked i{
+    animation: anim 0.5s ease-in-out;
+    -webkit-animation: anim 0.5s ease-in-out;
+  }
+  
+  @keyframes anim {
+    100% {
+      transform: rotate(-15deg) scale(1.3);
+      -webkit-transform: rotate(-15deg) scale(1.3);
+      -moz-transform: rotate(-15deg) scale(1.3);
+      -ms-transform: rotate(-15deg) scale(1.3);
+      -o-transform: rotate(-15deg) scale(1.3);
+      filter: blur(0.5px);
+      -webkit-filter: blur(0.5px);
+    }
+  }
